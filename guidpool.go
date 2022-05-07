@@ -1,6 +1,6 @@
 package comm
+import "github.com/google/uuid"
 
-import "github.com/satori/go.uuid"
 
 //GUIDPool GUID池
 type GUIDPool struct {
@@ -13,8 +13,7 @@ func (p *GUIDPool) InitPool() {
 	p.pipe = make(chan string, p.size)
 	go func() {
 		for {
-			u, _ := uuid.NewV4()
-			p.pipe <- u.String()
+			p.pipe <- uuid.New().String()
 		}
 	}()
 }

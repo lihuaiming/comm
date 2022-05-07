@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
-	"github.com/satori/go.uuid"
+	"github.com/google/uuid"
 )
 
 /*获取当前文件执行的路径*/
@@ -75,8 +75,7 @@ func GetMd5String(s string) string {
 
 //获取一个Guid值
 func GetGuid() string {
-	u,_:=uuid.NewV4()
-	return u.String()
+	return uuid.New().String()
 }
 
 //FileNameAndSuffix
