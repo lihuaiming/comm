@@ -8,7 +8,6 @@ import (
 	"path"
 	//"encoding/base64"
 	"fmt"
-	"github.com/satori/go.uuid"
 	//"io"
 	"math/rand"
 	"os"
@@ -75,11 +74,11 @@ func GetMd5String(s string) string {
 	return hex.EncodeToString(h.Sum(nil))
 }
 
-//获取一个Guid值
-func GetGuid() string {
-	u, _ := uuid.NewV4()
-	return u.String()
-}
+////获取一个Guid值
+//func GetGuid() string {
+//	u, _ := uuid.NewV4()
+//	return u.String()
+//}
 
 //FileNameAndSuffix
 func FileNameAndSuffix(filename string) string {
