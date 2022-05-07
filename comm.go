@@ -77,8 +77,8 @@ func GetMd5String(s string) string {
 
 //获取一个Guid值
 func GetGuid() string {
-	uuid, _ := uuid.NewV4()
-	return uuid.String()
+	u, _ := uuid.NewV4()
+	return u.String()
 }
 
 //FileNameAndSuffix
