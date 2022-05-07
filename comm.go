@@ -3,14 +3,13 @@ package comm
 import (
 	"crypto/md5"
 	"encoding/hex"
+	"fmt"
+	uuid "github.com/satori/go.uuid"
 	"io"
 	"log"
-	"path"
-	//"encoding/base64"
-	"fmt"
-	//"io"
 	"math/rand"
 	"os"
+	"path"
 	"path/filepath"
 	"strings"
 	"time"
@@ -75,10 +74,10 @@ func GetMd5String(s string) string {
 }
 
 ////获取一个Guid值
-//func GetGuid() string {
-//	u, _ := uuid.NewV4()
-//	return u.String()
-//}
+func GetGuid() string {
+	u, _ := uuid.NewV4()
+	return u.String()
+}
 
 //FileNameAndSuffix
 func FileNameAndSuffix(filename string) string {
